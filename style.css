@@ -31,10 +31,11 @@ header h2 {
 
 main {
   border: 2px solid #000;
-  margin: auto 200px;
+  margin: auto 50px;
   background: linear-gradient(#1c1c24, #1c1a23);
   border-radius: 20px;
   opacity: 0.9;
+  min-width: 100px;
 }
 
 .weather,
