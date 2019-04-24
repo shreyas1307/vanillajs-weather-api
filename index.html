@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Satisfy"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=PT+Mono"
+      rel="stylesheet"
+    />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <header>
+      <h1>Weather App</h1>
+      <h2>
+        powered by Dark Sky API
+      </h2>
+    </header>
+    <main>
+      <div class="weather">
+        <canvas class="icon" width="128" height="128"></canvas>
+        <h2 class="weather-location">Some Island</h2>
+      </div>
+      <div class="status">
+        <div class="temp-span">
+          <h2 class="status-temperature">90</h2>
+          <span>F</span>
+        </div>
+        <h2 class="status-summary">Mate it's lit</h2>
+      </div>
+    </main>
+    <script src="app.js"></script>
+    <script src="skycons.js"></script>
+  </body>
+</html>

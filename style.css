@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(90deg, #ab282e, #a81f56);
+  color: #fff;
+  /* font-family: "Satisfy", cursive; */
+  font-family: "PT Mono", monospace;
+  /* font-size: 1.2rem; */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  height: 150px;
+  justify-content: space-evenly;
+}
+
+header h1 {
+  font-family: "Satisfy", cursive;
+  font-size: 3rem;
+}
+
+header h2 {
+  font-weight: 300;
+}
+
+main {
+  border: 2px solid #000;
+  margin: auto 200px;
+  background: linear-gradient(#1c1c24, #1c1a23);
+  border-radius: 20px;
+  opacity: 0.9;
+}
+
+.weather,
+.status {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+}
+
+.weather-icon,
+.weather-location,
+.status-temperature,
+.status-summary {
+  margin: 35px auto;
+}
+
+.temp-span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.temp-span span {
+  margin-left: 15px;
+}
