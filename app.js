@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
     navigator.geolocation.getCurrentPosition(position => {
       lat = position.coords.latitude;
       long = position.coords.longitude;
-      console.log(lat, long);
+      // console.log(lat, long);
       const proxy = "https://cors-anywhere.herokuapp.com/";
       const api = `${proxy}https://api.darksky.net/forecast/45553e207c4ad5acf751d1b9d3a9da09/${lat},${long}`;
       // console.log(api);
@@ -23,7 +23,7 @@ window.addEventListener("load", () => {
           const { temperature, summary, icon } = data.currently;
 
           weatherLocation.textContent = data.timezone;
-          statusTemperature.textContent = temperature;
+          statusTemperature.textContent = `It is presently ${temperature}`;
           statusSummary.textContent = summary;
 
           // console.log(icon);
@@ -34,10 +34,12 @@ window.addEventListener("load", () => {
           statusTemperature.addEventListener("click", () => {
             if (temperatureSpan.textContent === "F") {
               temperatureSpan.textContent = "C";
-              statusTemperature.textContent = Math.floor(celsius);
+              statusTemperature.textContent = `It is presently ${Math.floor(
+                celsius
+              )}`;
             } else {
               temperatureSpan.textContent = "F";
-              statusTemperature.textContent = temperature;
+              statusTemperature.textContent = `It is presently ${temperature}`;
             }
           });
         });
