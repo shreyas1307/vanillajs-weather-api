@@ -13,20 +13,20 @@ window.addEventListener("load", () => {
       long = position.coords.longitude;
       console.log(lat, long);
       const proxy = "https://cors-anywhere.herokuapp.com/";
-      const api = `${proxy} https://api.darksky.net/forecast/45553e207c4ad5acf751d1b9d3a9da09/${lat},${long}`;
-      console.log(api);
+      const api = `${proxy}https://api.darksky.net/forecast/45553e207c4ad5acf751d1b9d3a9da09/${lat},${long}`;
+      // console.log(api);
 
       fetch(api)
         .then(res => res.json())
         .then(data => {
-          console.log(data);
+          // console.log(data);
           const { temperature, summary, icon } = data.currently;
 
           weatherLocation.textContent = data.timezone;
           statusTemperature.textContent = temperature;
           statusSummary.textContent = summary;
 
-          console.log(icon);
+          // console.log(icon);
           let celsius = (temperature - 32) * (5 / 9);
 
           setIcons(icon, document.querySelector(".icon"));
